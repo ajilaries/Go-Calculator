@@ -1,7 +1,7 @@
 package models
 
-type Expression struct{
-	A float64
-	B float64
-	Op string
+type Expression struct {
+	Operator string
+	Operands []float64
+	RawInput string   // original input
 }
