@@ -1,6 +1,9 @@
 package calculator
 
-import "math"
+import (
+	"errors"
+	"math"
+)
 
 func init() {
 	Register("+", add)
@@ -9,31 +12,48 @@ func init() {
 	Register("/", divide)
 	Register("^", power)
 	Register("%", mod)
+
+	// new
+	Register("sqrt", sqrt)
+	Register("log", log)
 }
 
-func add(a, b float64) (float64, error) {
-	return a + b, nil
+func add(nums ...float64) (float64, error) {
+	return nums[0] + nums[1], nil
 }
 
-func subtract(a, b float64) (float64, error) {
-	return a - b, nil
+func subtract(nums ...float64) (float64, error) {
+	return nums[0] - nums[1], nil
 }
 
-func multiply(a, b float64) (float64, error) {
-	return a * b, nil
+func multiply(nums ...float64) (float64, error) {
+	return nums[0] * nums[1], nil
 }
 
-func divide(a, b float64) (float64, error) {
-	if b == 0 {
+func divide(nums ...float64) (float64, error) {
+	if nums[1] == 0 {
 		return 0, ErrDivideByZero
 	}
-	return a / b, nil
+	return nums[0] / nums[1], nil
 }
 
-func power(a, b float64) (float64, error) {
-	return math.Pow(a, b), nil
+func power(nums ...float64) (float64, error) {
+	return math.Pow(nums[0], nums[1]), nil
 }
 
-func mod(a, b float64) (float64, error) {
-	return math.Mod(a, b), nil
+func mod(nums ...float64) (float64, error) {
+	return math.Mod(nums[0], nums[1]), nil
+}
+func sqrt(nums ...float64) (float64, error) {
+	if nums[0] < 0 {
+		return 0, errors.New("invalid sqrt")
+	}
+	return math.Sqrt(nums[0]), nil
+}
+
+func log(nums ...float64) (float64, error) {
+	if nums[0] <= 0 {
+		return 0, errors.New("invalid log")
+	}
+	return math.Log(nums[0]), nil
 }
