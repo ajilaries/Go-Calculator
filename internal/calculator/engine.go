@@ -1,8 +1,8 @@
 package calculator
 
-import "go-calculator/internal/models"
+// import "go-calculator/internal/models"
 
-type Operation func(a, b float64) (float64, error)
+type Operation func(nums  ...float64) (float64, error)
 
 var operations = map[string]Operation{}
 
@@ -12,9 +12,9 @@ func Register(op string, fn Operation) {
 }
 
 // Execute calculation
-func Execute(exp models.Expression) (float64, error) {
-	if fn, ok := operations[exp.Op]; ok {
-		return fn(exp.A, exp.B)
+func Execute(op string, nums ...float64) (float64, error) {
+	if fn, ok := operations[op]; ok {
+		return fn(nums...)
 	}
 	return 0, ErrInvalidOp
 }
