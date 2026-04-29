@@ -33,33 +33,7 @@ Real-time result display
 🔹 Scientific
 sqrt   Square root
 log    Natural log
-🏗️ Project Structure
-go-calculator/
-│
-├── cmd/
-│   └── app/                # CLI version
-│       └── main.go
-│
-├── internal/
-│   ├── calculator/
-│   │   ├── engine.go       # Execution engine
-│   │   ├── operations.go   # Math operations
-│   │   ├── parser.go       # Input parser
-│   │   └── errors.go       # Custom errors
-│   │
-│   └── models/
-│       └── expression.go   # Data model
-│
-├── G0Calculator/           # Wails Desktop UI
-│   ├── app.go              # Backend bridge
-│   ├── main.go             # Wails entry point
-│   └── frontend/
-│       ├── index.html      # UI layout
-│       ├── style.css       # Styling
-│       └── main.js         # Logic
-│
-├── go.mod
-└── README.md
+
 ⚙️ Installation
 1️⃣ Clone the repository
 git clone <your-repo-url>
@@ -68,8 +42,6 @@ cd go-calculator
 go mod tidy
 3️⃣ Install Wails
 go install github.com/wailsapp/wails/v2/cmd/wails@latest
-
-Check setup:
 
 wails doctor
 ▶️ Running the Application
