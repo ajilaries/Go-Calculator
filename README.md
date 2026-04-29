@@ -1,115 +1,62 @@
-🧮 Go Calculator (CLI + Desktop UI)
+Go Calculator (CLI + Desktop UI)
 
-A modern, modular calculator application built using Go with a clean architecture and a beautiful desktop UI powered by Wails.
+A simple and modular calculator built using Go, with both a CLI version and a desktop UI powered by Wails.
 
 🚀 Overview
 
-This project demonstrates real-world Go application development, combining:
+This project showcases how Go can be used to build both backend logic and desktop applications using a clean and structured approach.
 
-⚙️ A scalable backend (calculator engine)
-🖥️ A desktop UI (HTML, CSS, JS via Wails)
-🧠 Clean architecture (separation of concerns)
-✨ Features
-🧠 Backend
+✨ Core Features
 Modular calculator engine
-Plug-and-play operation system
-Custom error handling
-Expression parsing (supports flexible input)
-Unary + binary operations
-🎨 UI (Wails)
-Modern dark-themed calculator
-Button-based input (grid layout)
-Smooth interaction with backend
-Real-time result display
+Supports basic and advanced operations
+CLI + Desktop UI support
+Real-time calculation results
+Custom error handling (e.g., divide by zero)
+Clean and scalable project structure
 🧮 Supported Operations
-🔹 Basic
-+   Addition
--   Subtraction
-*   Multiplication
-/   Division
-🔹 Advanced
-^   Power
-%   Modulus
-🔹 Scientific
-sqrt   Square root
-log    Natural log
 
-⚙️ Installation
-1️⃣ Clone the repository
-git clone <your-repo-url>
-cd go-calculator
-2️⃣ Install dependencies
-go mod tidy
-3️⃣ Install Wails
-go install github.com/wailsapp/wails/v2/cmd/wails@latest
+Basic:
++ Addition
+- Subtraction
+* Multiplication
+/ Division
 
-wails doctor
-▶️ Running the Application
-🖥️ Run Desktop UI
-cd G0Calculator
+Advanced:
+^ Power
+% Modulus
+
+Scientific:
+sqrt Square root
+log Natural log
+
+🛠️ Technologies Used
+Go (Golang) – Core backend logic
+Wails – Desktop UI framework
+HTML, CSS, JavaScript – UI design
+Regex – Expression parsing
+▶️ Running the Project
+Desktop UI
 wails dev
-
-👉 Launches the calculator window
-
-💻 Run CLI Version
+CLI Version
 go run ./cmd/app
-💡 Usage
-UI Input (Buttons)
-Click numbers and operators
-Press = to calculate
-Press C to clear
-CLI Input
-10 + 5
-sqrt 25
-log 10
 ⚠️ Error Handling
 
-Handles:
+Handles common errors like:
 
-Invalid input format
+Invalid input
 Division by zero
 Unsupported operations
-
-Example:
-
-10 / 0 → Error: cannot divide by zero
-🧠 Architecture
-🔹 Layers
-Layer	Responsibility
-Parser	Converts input → Expression
-Engine	Executes operations
-Operations	Contains logic
-UI (Wails)	User interaction
-🔥 Key Concepts Used
-Go modules & project structuring
-Function registry pattern
-Variadic functions
-Expression parsing (regex-based)
-Frontend-backend communication (Wails bridge)
-🚀 Future Enhancements
- Complex expressions (10+5*2)
- Parentheses support
- Calculation history
- Keyboard input support
- Scientific calculator UI
- Export as standalone .exe
-🧪 Example Inputs
-7+3
-8*5
-sqrt25
-log10
-🤝 Contributing
-
-Contributions are welcome!
-
-Fork the repo
-Create a new branch
-Commit your changes
-Open a Pull Request
-📄 License
-
-This project is licensed under the MIT License.
-
+📦 Project Structure (Simplified)
+parser → Input processing
+engine → Calculation logic
+operations → Math functions
+ui → Frontend (Wails)
+🚀 Future Improvements
+Complex expressions (BODMAS)
+Parentheses support
+Calculation history
+Keyboard input
+Standalone executable
 👨‍💻 Author
 
 Developed by Ajil
