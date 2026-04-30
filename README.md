@@ -1,62 +1,24 @@
-Go Calculator (CLI + Desktop UI)
+# 🧮 Calculator App
 
-A simple and modular calculator built using Go, with both a CLI version and a desktop UI powered by Wails.
+A modern desktop calculator built using Go + Wails.
 
-🚀 Overview
+## 🚀 Features
+- Basic arithmetic operations (+, -, ×, ÷)
+- Clean UI
+- Fast performance
 
-This project showcases how Go can be used to build both backend logic and desktop applications using a clean and structured approach.
+## 📦 Download
 
-✨ Core Features
-Modular calculator engine
-Supports basic and advanced operations
-CLI + Desktop UI support
-Real-time calculation results
-Custom error handling (e.g., divide by zero)
-Clean and scalable project structure
-🧮 Supported Operations
+👉 Go to Releases and download the latest version:
 
-Basic:
-+ Addition
-- Subtraction
-* Multiplication
-/ Division
+https://github.com/ajilaries/Go-Calculator/releases
 
-Advanced:
-^ Power
-% Modulus
+## 🛠️ Built With
+- Go
+- Wails
+- HTML, CSS, JavaScript
 
-Scientific:
-sqrt Square root
-log Natural log
+## ▶️ Run Locally
 
-🛠️ Technologies Used
-Go (Golang) – Core backend logic
-Wails – Desktop UI framework
-HTML, CSS, JavaScript – UI design
-Regex – Expression parsing
-▶️ Running the Project
-Desktop UI
+```bash
 wails dev
-CLI Version
-go run ./cmd/app
-⚠️ Error Handling
-
-Handles common errors like:
-
-Invalid input
-Division by zero
-Unsupported operations
-📦 Project Structure (Simplified)
-parser → Input processing
-engine → Calculation logic
-operations → Math functions
-ui → Frontend (Wails)
-🚀 Future Improvements
-Complex expressions (BODMAS)
-Parentheses support
-Calculation history
-Keyboard input
-Standalone executable
-👨‍💻 Author
-
-Developed by Ajil
